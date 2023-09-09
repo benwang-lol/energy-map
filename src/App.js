@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import MapChart from './map/map';
+import ColorBar from './color-legend/color_legend';
+
+const colors = [
+  "#ffedea",
+  "#ffcec5",
+  "#ffad9f",
+  "#ff8a75",
+  "#ff5533",
+  "#e2492d",
+  "#be3d26",
+  "#9a311f",
+  "#782618"
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ColorBar 
+        colors={colors}
+        leftTitle="Left side"
+        rightTitle="Right side"
+      />
+      <MapChart/>
     </div>
   );
 }
