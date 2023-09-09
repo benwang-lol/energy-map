@@ -33,7 +33,7 @@ const MapChart = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        csv("/RECM.csv").then(state => {
+        csv("/RECM_2022.csv").then(state => {
             setData(state);
         });
       }, []);
@@ -43,16 +43,22 @@ const MapChart = () => {
     const colorScale = scaleQuantile()
       .domain(data.map(d => d.RECM))
       .range([
-        "#ffedea",
-        "#ffcec5",
-        "#ffad9f",
-        "#ff8a75",
-        "#ff5533",
-        "#e2492d",
-        "#be3d26",
-        "#9a311f",
-        "#782618"
-    ]);
+        "#F0FFF0",
+        "#E0EEE0",
+        "#C1CDC1",
+        "#98FB98",
+        "#90EE90",
+        "#7FFF00",
+        "#76EE00",
+        "#66CD00",
+        "#32CD32",
+        "#458B00",
+        "#228B22",
+        "#008000",
+        "#006400",
+        "#006400",
+        "#004D00"
+      ]);
 
     return (
         <ComposableMap projection="geoAlbersUsa">
