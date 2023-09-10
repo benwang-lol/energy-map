@@ -1,18 +1,7 @@
 import './App.css';
 import MapChart from './map/map';
 import ColorBar from './color-legend/color_legend';
-
-// const red_colors = [
-//   "#ffedea",
-//   "#ffcec5",
-//   "#ffad9f",
-//   "#ff8a75",
-//   "#ff5533",
-//   "#e2492d",
-//   "#be3d26",
-//   "#9a311f",
-//   "#782618"
-// ];
+import Search from './search/search';
 
 const green_colors = [
   "#F0FFF0",
@@ -32,13 +21,18 @@ const green_colors = [
   "#004D00"
 ];
 
+const handleOnSearchChange = (userInput) => {
+
+}
+
 function App() {
   return (
     <div className="App">
+      <Search  />
       <ColorBar 
         colors={green_colors}
-        leftTitle="Left side"
-        rightTitle="Right side"
+        leftTitle="Least Renewable Energy"
+        rightTitle="Most Renewable Energy"
       />
       <MapChart/>
     </div>
